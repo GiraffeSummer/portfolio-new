@@ -20,7 +20,7 @@
 </script>
 
 <section id="contact">
-  <form data-netlify="true" name="contact" method="POST" class="form">
+  <form netlify name="contact" class="form">
     <legend>{text.title}</legend>
     <fieldset>
       <div class="row">
