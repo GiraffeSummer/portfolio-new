@@ -64,7 +64,10 @@
     <li>
       <select bind:value={selectedLanguage} on:change={changeLang}>
         {#each langlist as lang}
-          <option value={lang}>{langProperties(lang).icon} {lang}</option>
+          <option value={lang}
+            >{langProperties(lang).icon}
+            {langProperties(lang).name || lang}</option
+          >
         {/each}
       </select>
     </li>

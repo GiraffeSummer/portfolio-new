@@ -5,8 +5,8 @@ let language = navigator.language.split('-')[0].toLowerCase();
 console.log(`Language: ${language}`);
 
 const langMap = {
-    en: { translate: EN, icon: '🇬🇧' },
-    nl: { translate: NL, icon: '🇳🇱' }
+    en: { translate: EN, name: "English", icon: '🇬🇧' },
+    nl: { translate: NL, name: "Dutch", icon: '🇳🇱' }
 };
 
 const langlist = Object.keys(langMap)
