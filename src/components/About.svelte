@@ -1,27 +1,11 @@
 <script>
   import lang, { addListener } from '../lang';
+  import { socials, getAbout } from '../data.js';
 
-  const socials = [
-    {
-      url: 'https://github.com/GiraffeSummer',
-      icon: 'fa-brands fa-github',
-    },
-    {
-      url: 'https://linkedin.com/in/gido-selten-02067815b',
-      icon: 'fa-brands fa-linkedin',
-    },
-  ];
-
-  let text = {
-    name: lang('about/name'),
-    description: lang('about/description'),
-  };
+  let text = getAbout();
 
   addListener('langChanged', () => {
-    text = {
-      name: lang('about/name'),
-      description: lang('about/description'),
-    };
+    text = getAbout();
   });
 </script>
 
