@@ -60,6 +60,11 @@
         url: 'https://friendlamp.netlify.app/',
         // source: 'https://github.com/GiraffeSummer/pro-cons-list',
       },
+      {
+        name: lang('projects/portfolio/name'),
+        description: lang('projects/portfolio/description'),
+        url: 'https://github.com/GiraffeSummer/portfolio-new'
+      }
     ];
   }
 </script>
@@ -73,7 +78,7 @@
   </div>
   <div class="row">
     {#each projects as project}
-      <div class="col-lg card">
+      <div class="col-lg-3 card">
         <h1 class="section">{project.name}</h1>
         {#if project.img != undefined}
           <img src={project.img} alt={project.name} class="section media" />

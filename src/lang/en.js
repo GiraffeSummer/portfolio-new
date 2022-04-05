@@ -27,6 +27,9 @@ export default function (field) {
         'projects/friendlight/description': "A (physical) light that syncs with your friend's light.",
         'projects/friendlight/longtext': 'I saw a similar idea online, and I thought I could do it better and cheaper.\n(Website is setup instructions, contact me for more info/demo)',
 
+        'projects/portfolio/name': "This portfolio",
+        'projects/portfolio/description': "A portfolio that I made with projects that I'm most proud of, or that are most interesting.",
+
         //about page
         'about/name': 'Hi, I\'m Gido',
         'about/description': 'I like to make fun creative (web) apps. or small useful gimmics.',
