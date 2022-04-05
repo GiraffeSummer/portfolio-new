@@ -63,7 +63,9 @@
       {
         name: lang('projects/portfolio/name'),
         description: lang('projects/portfolio/description'),
-        url: 'https://github.com/GiraffeSummer/portfolio-new'
+        url: '/',
+        target: '_self',
+        source: 'https://github.com/GiraffeSummer/portfolio-new'
       }
     ];
   }
@@ -96,7 +98,7 @@
           {/if}
         </div>
         <div class="row">
-          <a class="button tertiary col-md" target="_blank" href={project.url}
+          <a class="button tertiary col-md" target="{project.target || '_blank'}" href={project.url}
             >{text.link}</a
           >
           {#if project.source != undefined}

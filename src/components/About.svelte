@@ -25,14 +25,12 @@
   });
 </script>
 
-<section id="about" class="row is-center">
-  <div class="col-lg-6">
-    <img
-      alt="me"
-      src="https://cdn.discordapp.com/avatars/151039550234296320/a_d27758887cd0d33cca84eba18f86cd6b.webp"
-    />
-  </div>
-  <div class="col-lg-6">
+<section id="about" class="row ">
+  <img
+    alt="me"
+    src="https://cdn.discordapp.com/avatars/151039550234296320/a_d27758887cd0d33cca84eba18f86cd6b.webp"
+  />
+  <div class="col-sm ">
     <div class="bio">
       <h1>{text.name}</h1>
       <p>{text.description}</p>
