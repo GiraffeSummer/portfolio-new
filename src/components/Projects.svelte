@@ -65,8 +65,8 @@
         description: lang('projects/portfolio/description'),
         url: '/',
         target: '_self',
-        source: 'https://github.com/GiraffeSummer/portfolio-new'
-      }
+        source: 'https://github.com/GiraffeSummer/portfolio-new',
+      },
     ];
   }
 </script>
@@ -98,14 +98,17 @@
           {/if}
         </div>
         <div class="row">
-          <a class="button tertiary col-md" target="{project.target || '_blank'}" href={project.url}
-            >{text.link}</a
+          <a
+            class="button tertiary col-md"
+            target={project.target || '_blank'}
+            href={project.url}
+            ><i class="fa-regular fa-share-from-square" /> {text.link}</a
           >
           {#if project.source != undefined}
             <a
               class="button primary col-md"
               target="_blank"
-              href={project.source}>Github</a
+              href={project.source}><i class="fa-brands fa-github" /> Github</a
             >
           {/if}
         </div>
