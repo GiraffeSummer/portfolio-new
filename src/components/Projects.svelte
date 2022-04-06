@@ -1,6 +1,6 @@
 <script>
   import lang, { addListener } from '../lang';
-  import {getProjects} from '../data.js'
+  import { getProjects } from '../data.js';
 
   let text = {
     nosource: lang('projects/nosource'),
@@ -24,12 +24,6 @@
 </script>
 
 <section id="projects" class="row is-center">
-  <div class="row">
-    <small
-      >{text.nosource},
-      <a href="#contact">{text.contact}</a></small
-    >
-  </div>
   <div class="row">
     {#each projects as project}
       <div class="col-lg-3 card">
@@ -67,4 +61,22 @@
       </div>
     {/each}
   </div>
+  <div class="row">
+    <i class="nosource"
+      >{text.nosource},
+      <a href="#contact">{text.contact}</a></i
+    >
+  </div>
 </section>
+
+<style>
+  section {
+    margin: 1.5rem 0;
+    padding: 1rem 1rem;
+  }
+
+  i.nosource {
+    padding: 1rem 1rem;
+    font-size: 1rem;
+  }
+</style>

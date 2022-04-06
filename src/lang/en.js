@@ -6,7 +6,7 @@ export default function (field) {
 
         //project page
         'projects/more': 'More',
-        'projects/nosource': 'If there\'s no source shown',
+        'projects/nosource': 'If there\'s no Github link',
 
         'projects/drawapp/name': 'DrawApp',
         'projects/drawapp/description': 'An application where multiple users can draw pixelart at the same time',
@@ -31,8 +31,8 @@ export default function (field) {
         'projects/portfolio/description': "A portfolio that I made with projects that I'm most proud of, or that are most interesting.",
 
         //about page
-        'about/name': 'Hi, I\'m Gido',
-        'about/description': 'I like to make fun creative (web) apps. or small useful gimmics.',
+        'about/name': 'Hi, I\'m Gido,',
+        'about/description': 'I like to make fun creative (web) apps. or small useful gimmicks.',
 
         //contact page
         'contact/title': "Contact",

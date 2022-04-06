@@ -30,17 +30,27 @@
 </section>
 
 <style>
+  section {
+    margin-top: 1.5rem;
+    color: var(--back-color);
+    padding: 4rem 2rem;
+    background: rgb(63, 94, 251);
+    background: linear-gradient(
+      150deg,
+      rgba(63, 94, 251, 1) 45%,
+      rgba(252, 70, 107, 1) 100%
+    );
+  }
   img {
     border: 1.5px solid black;
-
     box-shadow: 2px 2px 6px #003864;
     border-radius: 13px;
-    padding: 0.2rem;
     object-fit: cover;
   }
   i.icon {
     font-size: 2rem;
     margin: 0.1rem 0.4rem;
     margin-left: 0.4rem;
+    color: var(--back-color);
   }
 </style>

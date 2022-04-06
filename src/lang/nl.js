@@ -6,7 +6,7 @@ export default function (field) {
 
         //project page
         'projects/more': 'Meer',
-        'projects/nosource': 'Als er geen source staat',
+        'projects/nosource': 'Als er geen Github link staat',
 
         'projects/drawapp/name': 'Drawapp',
         'projects/drawapp/description': 'Een app die meerdere users tegelijkertijd aan een pixelart laat werken.',
@@ -32,7 +32,7 @@ export default function (field) {
 
         //about page
         'about/name': 'Hoi, ik ben Gido,',
-        'about/description': 'Ik vind het leuk om webapps te maken',
+        'about/description': 'Ik vind het leuk om creative en leuke webapps te maken.',
 
         //contact page
         'contact/title': "Stuur bericht",

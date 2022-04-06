@@ -80,6 +80,7 @@
 </header>
 
 <style>
+  
   select {
     float: right;
     -moz-box-sizing: border-box;

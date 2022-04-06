@@ -47,3 +47,12 @@
     <button class="primary" type="submit" id="submit">{text.send}</button>
   </form>
 </section>
+
+
+<style>
+  section {
+    margin: 1.5rem 0;
+    padding: 1rem 1rem;
+  }
+
+</style>
