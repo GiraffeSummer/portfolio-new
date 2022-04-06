@@ -36,17 +36,22 @@
   <div class="hidden-md hidden-lg ">
     <label for="drawer-control" class="drawer-toggle" />
     <input type="checkbox" id="drawer-control" class="drawer" />
+    <!--Drawer-->
     <div class="container">
       <label for="drawer-control" class="drawer-close" />
-
       {#each navitems as nav}
         {#if nav.enabled == undefined || nav.enabled == true}
           <a class="row" href={nav.href}>{nav.label}</a>
         {/if}
       {/each}
     </div>
+
+    <select bind:value={selectedLanguage} on:change={changeLang} class="mobile">
+      {#each langlist as lang}
+        <option value={lang}>{langProperties(lang).icon.trim()}</option>
+      {/each}
+    </select>
   </div>
-  <div />
 
   <!--Desktop-->
   <div class="visually-hidden-sm row">
@@ -75,6 +80,20 @@
 </header>
 
 <style>
+  select {
+    float: right;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+  }
+  select.mobile {
+    font-size: 1.3rem;
+    text-indent: -3px;
+    padding: 0.3em 0 0.3em 0.7em;
+  }
   li {
     list-style: none;
   }

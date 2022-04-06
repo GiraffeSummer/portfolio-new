@@ -41,7 +41,7 @@ export default function (field) {
         'contact/message': "Message",
         'contact/send': "Send",
 
-        //header page
+        //nav page
         'nav/home': 'Home',
         'nav/projects': 'Projects',
         'nav/about': 'About',

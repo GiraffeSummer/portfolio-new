@@ -6,7 +6,7 @@
     window.matchMedia &&
     window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  import Header from './components/Header.svelte';
+  import Navbar from './components/Navbar.svelte';
   import Projects from './components/Projects.svelte';
   import About from './components/About.svelte';
   import Contact from './components/Contact.svelte';
@@ -19,7 +19,7 @@
 </script>
 
 <main class:dark={darkMode}>
-  <Header />
+  <Navbar />
   <div id="#home" />
   <About />
   <Projects />
