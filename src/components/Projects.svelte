@@ -45,14 +45,14 @@
         </div>
         <div class="row">
           <a
-            class="button tertiary col-md"
+            class="button g-secondary col-md"
             target={project.target || '_blank'}
             href={project.url}
             ><i class="fa-regular fa-share-from-square" /> {text.link}</a
           >
           {#if project.source != undefined}
             <a
-              class="button primary col-md"
+              class="button g-primary col-md"
               target="_blank"
               href={project.source}><i class="fa-brands fa-github" /> Github</a
             >

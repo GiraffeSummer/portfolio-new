@@ -30,6 +30,18 @@ export default function (field) {
         'projects/portfolio/name': "This portfolio",
         'projects/portfolio/description': "A portfolio that I made with projects that I'm most proud of, or that are most interesting.",
 
+        //skills general
+        'skills/title': 'Skills',
+
+        //skill parents
+        'skills/softdev': 'Software development',
+        'skills/webdev': 'Web development',
+        'skills/databases': "Databases",
+        //skills
+        'skills/general': 'General skills',
+        'skills/problemsolve': 'Problem solving',
+        'skills/creative': 'Creativity',
+
         //about page
         'about/name': 'Hi, I\'m Gido,',
         'about/description': 'I like to make fun creative (web) apps. or small useful gimmicks.',

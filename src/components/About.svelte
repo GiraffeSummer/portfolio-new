@@ -10,14 +10,11 @@
 </script>
 
 <section id="about" class="row ">
-  <img
-    alt="me"
-    src="https://cdn.discordapp.com/avatars/151039550234296320/a_d27758887cd0d33cca84eba18f86cd6b.webp"
-  />
+  <img alt="me" src={text.img} />
   <div class="col-sm ">
     <div class="bio">
       <h1>{text.name}</h1>
-      <p>{text.description}</p>
+      <h5>{text.description}</h5>
     </div>
     <div class="icons row">
       {#each socials as social}
@@ -30,6 +27,9 @@
 </section>
 
 <style>
+  :root {
+    --about-image-size: 12rem;
+  }
   section {
     margin-top: 1.5rem;
     color: var(--back-color);
@@ -42,10 +42,13 @@
     );
   }
   img {
-    border: 1.5px solid black;
+    border: 1.8px solid black;
     box-shadow: 2px 2px 6px #003864;
     border-radius: 13px;
     object-fit: cover;
+    width: var(--about-image-size);
+    height: var(--about-image-size);
+    margin-right: 3rem;
   }
   i.icon {
     font-size: 2rem;

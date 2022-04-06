@@ -20,7 +20,7 @@
 </script>
 
 <section id="contact">
-  <form netlify method="POST" name="contact" class="form">
+  <form data-netlify="true" method="POST" name="contact" class="form">
     <legend>{text.title}</legend>
     <fieldset>
       <div class="row">
@@ -44,15 +44,13 @@
         <textarea name="message" rows="3" placeholder={text.message} />
       </div>
     </fieldset>
-    <button class="primary" type="submit" id="submit">{text.send}</button>
+    <button class="button g-secondary" type="submit" id="submit">{text.send}</button>
   </form>
 </section>
-
 
 <style>
   section {
     margin: 1.5rem 0;
     padding: 1rem 1rem;
   }
-
 </style>

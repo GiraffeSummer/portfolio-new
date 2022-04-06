@@ -30,6 +30,19 @@ export default function (field) {
         'projects/portfolio/name': "Dit portfolio",
         'projects/portfolio/description': "Portfolio van de projecten waar ik het meest trots op ben, of die het meest interessant zijn.",
 
+        //skills general
+        'skills/title': 'Skills',
+
+        //skill parents
+        'skills/softdev': 'Software ontwikkeling',
+        'skills/webdev': 'Web development',
+        'skills/databases': "Databases",
+        //skills
+        'skills/general': 'Algemene skills',
+        'skills/problemsolve': 'Probleem oplossing',
+        'skills/creative': 'Creativiteit',
+
+
         //about page
         'about/name': 'Hoi, ik ben Gido,',
         'about/description': 'Ik vind het leuk om creative en leuke webapps te maken.',

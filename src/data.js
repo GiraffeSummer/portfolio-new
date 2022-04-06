@@ -17,6 +17,8 @@ function getAbout() {
     return {
         name: lang('about/name'),
         description: lang('about/description'),
+        img: './profile.jpg',
+        discord: { avatar: 'https://cdn.discordapp.com/avatars/151039550234296320/a_d27758887cd0d33cca84eba18f86cd6b.gif' }
     }
 }
 
@@ -70,4 +72,50 @@ function getProjects() {
     ];
 }
 
-export { socials, getProjects, getAbout } 
+function getSkills(dataOnly = false) {
+    const skillData = {
+        title: lang('skills/title'),
+        skillMaxNumber: 10,
+    }
+    if (dataOnly) {
+        return skillData;
+    } else
+        return {
+            ...skillData,
+            skills: [
+                {
+                    name: lang('skills/webdev'), iconClass: 'fa-solid fa-code', value: 7, children: [
+                        { name: 'nodejs', iconClass: 'fa-brands fa-node-js', value: 9 },
+                        { name: 'javascript', iconClass: 'fa-brands fa-js-square', value: 9 },
+                        { name: 'html', iconClass: 'fa-brands fa-html5', value: 9 },
+                        { name: 'css', iconClass: 'fa-brands fa-css3', value: 4 },
+                        { name: 'php', iconClass: 'fa-brands fa-php', value: 6 },
+                        { name: 'laravel', iconClass: 'fa-brands fa-laravel', value: 4 }
+                    ].sort((a, d) => d.value - a.value)
+                },
+
+                {
+                    name: lang('skills/databases'), iconClass: 'fa-solid fa-database', value: 8, children: [
+                        { name: 'mysql', icon: 'https://www.mysql.com/common/logos/logo-mysql-170x115.png', value: 7 },
+                        { name: 'mongodb', icon: 'https://raw.githubusercontent.com/mongodb-js/leaf/master/dist/mongodb-leaf_128x128.png', value: 8 },
+                    ].sort((a, d) => d.value - a.value)
+                },
+
+                {
+                    name: lang('skills/softdev'), iconClass: 'fa-solid fa-code', children: [
+                        { name: 'C#', iconClass: 'fa-brands fa-csharp', value: 8 },
+                        { name: 'Electronjs', iconClass: 'fa-solid fa-atom', value: 7 },
+                    ].sort((a, d) => d.value - a.value)
+                },
+
+                {
+                    name: lang('skills/general'), iconClass: 'fa-solid fa-box', children: [
+                        { name: lang('skills/problemsolve'), iconClass: 'fa-solid fa-lightbulb', value: 8 },
+                        { name: lang('skills/creative'), iconClass: 'fa-solid fa-paintbrush', value: 7 },
+                    ].sort((a, d) => d.value - a.value)
+                }
+            ]
+        }
+}
+
+export { socials, getProjects, getAbout, getSkills } 
