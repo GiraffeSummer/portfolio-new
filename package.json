@@ -14,7 +14,6 @@
     "vite": "^2.9.0"
   },
   "dependencies": {
-    "chota": "^0.8.0",
     "mini.css": "^3.0.1"
   }
 }
