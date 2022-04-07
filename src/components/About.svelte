@@ -15,10 +15,10 @@
 
 <section id="about" class="row ">
   <div class="hidden-md hidden-lg row">
-    <img alt="me-small" src={text.img} />
+    <img alt="me" class="me-small" src={text.img} />
   </div>
   <div class="visually-hidden-sm row">
-    <img alt="me" src={text.img} />
+    <img alt="me" class="me" src={text.img} />
   </div>
   <div class="col-sm ">
     <div class="bio">
