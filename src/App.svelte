@@ -1,5 +1,5 @@
 <script>
-  import '@fortawesome/fontawesome-free';
+  import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
   import 'mini.css';
   import './global.css';
   import lang, { setLanguage } from './lang.js';
