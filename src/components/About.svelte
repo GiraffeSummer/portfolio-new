@@ -15,7 +15,7 @@
 
 <section id="about" class="row ">
   <div class="hidden-md hidden-lg row">
-    <img alt="me" class="me-small" src={text.img} width="100%" />
+    <img alt="me" class="me-small" src={text.img} width="100%" height="20rem" />
   </div>
   <div class="visually-hidden-sm row">
     <img alt="me" class="me" src={text.img} width="12rem" height="12rem" />
