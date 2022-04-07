@@ -8,6 +8,8 @@ language.subscribe(v => {
     console.log(`Language: ${v}`);
 })();
 
+let translations = {};
+
 const langMap = {
     en: { translate: EN, name: "English", icon: '🇬🇧' },
     nl: { translate: NL, name: "Nederlands", icon: '🇳🇱' }
@@ -37,13 +39,19 @@ function langProperties(lang) {
         throw new Error('Invalid language')
 }
 
+//maybe map this in a service worker
 export default function (field = null) {
     //let val = (field != null) ? langMap[language].translate(field) : "invalid translation";
-    let val = {}
-    Object.keys(langMap).forEach(lang => {
-        val[lang] = langMap[lang].translate(field)
-    })
-    return val
+    if (field in translations) {
+        return translations[field];
+    } else {
+        let val = {}
+        Object.keys(langMap).forEach(lang => {
+            val[lang] = langMap[lang].translate(field)
+        })
+        translations[field] = val;
+        return val
+    }
 }
 
 export {
