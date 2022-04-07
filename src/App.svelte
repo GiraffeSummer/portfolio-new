@@ -1,4 +1,5 @@
 <script>
+  import '@fortawesome/fontawesome-free';
   import 'mini.css';
   import './global.css';
   import lang, { setLanguage } from './lang.js';

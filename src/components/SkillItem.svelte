@@ -9,7 +9,13 @@
 <div class="section">
   <div>
     {#if skill.icon}
-      <img class="icon" src={skill.icon} alt={skill.name} />
+      <img
+        class="icon"
+        src={skill.icon}
+        alt={skill.name}
+        width="1.2rem"
+        height="1.2rem"
+      />
     {:else if skill.iconClass}
       <i class={skill.iconClass} />
     {/if}
