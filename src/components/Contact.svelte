@@ -1,22 +1,12 @@
 <script>
-  import lang, { addListener } from '../lang';
-  let text = {
-    title: lang('contact/title'),
-    email: lang('contact/email'),
-    subject: lang('contact/subject'),
-    message: lang('contact/message'),
-    send: lang('contact/send'),
+  import lang, { language } from '../lang';
+  $: text = {
+    title: lang('contact/title')[$language],
+    email: lang('contact/email')[$language],
+    subject: lang('contact/subject')[$language],
+    message: lang('contact/message')[$language],
+    send: lang('contact/send')[$language],
   };
-
-  addListener('langChanged', () => {
-    text = {
-      title: lang('contact/title'),
-      email: lang('contact/email'),
-      subject: lang('contact/subject'),
-      message: lang('contact/message'),
-      send: lang('contact/send'),
-    };
-  });
 </script>
 
 <section id="contact">
@@ -44,7 +34,9 @@
         <textarea name="message" rows="3" placeholder={text.message} />
       </div>
     </fieldset>
-    <button class="button g-secondary" type="submit" id="submit">{text.send}</button>
+    <button class="button g-secondary" type="submit" id="submit"
+      >{text.send}</button
+    >
   </form>
 </section>
 

@@ -1,16 +1,25 @@
 <script>
-  import lang, { addListener } from '../lang';
-  import { socials, getAbout } from '../data.js';
+  import lang, { language } from '../lang';
+  import { socials } from '../data.js';
 
-  let text = getAbout();
-
-  addListener('langChanged', () => {
-    text = getAbout();
-  });
+  $: text = {
+    name: lang('about/name')[$language],
+    description: lang('about/description')[$language],
+    img: './profile.jpg',
+    discord: {
+      avatar:
+        'https://cdn.discordapp.com/avatars/151039550234296320/a_d27758887cd0d33cca84eba18f86cd6b.gif',
+    },
+  };
 </script>
 
 <section id="about" class="row ">
-  <img alt="me" src={text.img} />
+  <div class="hidden-md hidden-lg row">
+    <img alt="me-small" src={text.img} />
+  </div>
+  <div class="visually-hidden-sm row">
+    <img alt="me" src={text.img} />
+  </div>
   <div class="col-sm ">
     <div class="bio">
       <h1>{text.name}</h1>
@@ -41,14 +50,20 @@
       rgba(252, 70, 107, 1) 100%
     );
   }
+
   img {
     border: 1.8px solid black;
     box-shadow: 2px 2px 6px #003864;
     border-radius: 13px;
     object-fit: cover;
+  }
+  .me {
     width: var(--about-image-size);
     height: var(--about-image-size);
     margin-right: 3rem;
+  }
+
+  .me-small {
   }
   i.icon {
     font-size: 2rem;

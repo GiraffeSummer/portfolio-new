@@ -1,26 +1,16 @@
 <script>
-  import lang, { addListener } from '../lang';
+  import lang, { language } from '../lang.js';
   import { getProjects } from '../data.js';
 
-  let text = {
-    nosource: lang('projects/nosource'),
-    contact: lang('contact'),
-    more: lang('projects/more'),
-    link: lang('link'),
+  $: text = {
+    nosource: lang('projects/nosource')[$language],
+    contact: lang('contact')[$language],
+    more: lang('projects/more')[$language],
+    link: lang('link')[$language],
   };
 
-  addListener('langChanged', () => {
-    projects = getProjects();
-
-    text = {
-      nosource: lang('projects/nosource'),
-      contact: lang('contact'),
-      more: lang('projects/more'),
-      link: lang('link'),
-    };
-  });
-
-  let projects = getProjects();
+  //$language reference needed to subscribe to changes
+  $: projects = getProjects($language);
 </script>
 
 <section id="projects" class="row is-center">
