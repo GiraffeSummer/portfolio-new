@@ -18,23 +18,31 @@
 <header>
   <!--Mobile-->
   <div class="hidden-md hidden-lg row">
-    <label for="drawer-control" class="drawer-toggle" />
-    <input type="checkbox" id="drawer-control" class="drawer" />
-    <!--Drawer-->
-    <div class="container">
-      <label for="drawer-control" class="drawer-close" />
-      {#each navitems as nav}
-        {#if nav.enabled == undefined || nav.enabled == true}
-          <a class="row" href={nav.href}>{nav.label}</a>
-        {/if}
-      {/each}
-    </div>
+    <li>
+      <label for="drawer-control" class="drawer-toggle" />
+      <input type="checkbox" id="drawer-control" class="drawer" />
+      <!--Drawer-->
+      <div class="container">
+        <label for="drawer-control" class="drawer-close" />
+        {#each navitems as nav}
+          {#if nav.enabled == undefined || nav.enabled == true}
+            <a class="row" href={nav.href}>{nav.label}</a>
+          {/if}
+        {/each}
+      </div>
+    </li>
 
-    <select bind:value={selectedLanguage} on:change={changeLang} class="mobile">
-      {#each langlist as lang}
-        <option value={lang}>{langProperties(lang).icon.trim()}</option>
-      {/each}
-    </select>
+    <li class="langbtn">
+      <select
+        bind:value={selectedLanguage}
+        on:change={changeLang}
+        class="mobile"
+      >
+        {#each langlist as lang}
+          <option value={lang}>{langProperties(lang).icon.trim()}</option>
+        {/each}
+      </select>
+    </li>
   </div>
 
   <!--Desktop-->
@@ -77,6 +85,10 @@
     font-size: 1.3rem;
     text-indent: -3px;
     padding: 0.3em 0 0.3em 0.7em;
+  }
+
+  .langbtn {
+    margin: 0 0.8rem 0 auto;
   }
 
   .head-icon {
