@@ -15,7 +15,7 @@
 
 <section id="about" class="row ">
   <div class="hidden-md hidden-lg row">
-    <img alt="me" class="me-small" src={text.img} width="100%" height="auto" />
+    <img alt="me" class="me-small" src={text.img} width="100%" />
   </div>
   <div class="visually-hidden-sm row">
     <img alt="me" class="me" src={text.img} width="12rem" height="12rem" />
@@ -27,8 +27,13 @@
     </div>
     <div class="icons row">
       {#each socials as social}
-        <a rel="noopener noreferrer" target="_blank" href={social.url}>
-          <i aria-label={social.name} class="icon {social.icon}" />
+        <a
+          rel="noopener noreferrer"
+          aria-label={social.name}
+          target="_blank"
+          href={social.url}
+        >
+          <span class="icon {social.icon}" />
         </a>
       {/each}
     </div>
@@ -63,9 +68,7 @@
     margin-right: 3rem;
   }
 
-  .me-small {
-  }
-  i.icon {
+  span.icon {
     font-size: 2rem;
     margin: 0.1rem 0.4rem;
     margin-left: 0.4rem;
