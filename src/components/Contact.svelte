@@ -14,7 +14,7 @@
     <legend>{text.title}</legend>
     <fieldset>
       <div class="row">
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="contact" value="contact" />
         <label for="email">{text.email}</label>
         <input
           type="email"

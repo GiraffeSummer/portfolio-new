@@ -28,7 +28,7 @@
     <div class="icons row">
       {#each socials as social}
         <a rel="noopener noreferrer" target="_blank" href={social.url}>
-          <i class="icon {social.icon}" />
+          <i aria-label={social.name} class="icon {social.icon}" />
         </a>
       {/each}
     </div>

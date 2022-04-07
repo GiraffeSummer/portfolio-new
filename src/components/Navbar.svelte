@@ -20,7 +20,7 @@
   <div class="hidden-md hidden-lg row">
     <li>
       <label for="drawer-control" class="drawer-toggle" />
-      <input type="checkbox" id="drawer-control" class="drawer" />
+      <input type="checkbox" id="drawer-control" name="drawer-control" class="drawer" />
       <!--Drawer-->
       <div class="container">
         <label for="drawer-control" class="drawer-close" />
