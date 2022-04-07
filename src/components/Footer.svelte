@@ -1,13 +1,7 @@
 <script>
-  import lang, { addListener } from '../lang';
-  
-  let text = lang('footer');
-
-  addListener('langChanged', () => {
-    text = lang('footer');
-  });
+  import lang, { language } from '../lang';
 </script>
 
 <footer>
-  <p>© 2022 - {text} Gido Selten</p>
+  <p>© 2022 - {lang('footer')[$language]} Gido Selten</p>
 </footer>

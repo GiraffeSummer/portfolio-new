@@ -1,4 +1,5 @@
-import lang, { addListener } from './lang.js';
+import langRaw, { language } from './lang.js';
+import { get } from 'svelte/store'
 
 //Social links
 const socials = [
@@ -11,16 +12,6 @@ const socials = [
         icon: 'fa-brands fa-linkedin',
     },
 ];
-
-//About
-function getAbout() {
-    return {
-        name: lang('about/name'),
-        description: lang('about/description'),
-        img: './profile.jpg',
-        discord: { avatar: 'https://cdn.discordapp.com/avatars/151039550234296320/a_d27758887cd0d33cca84eba18f86cd6b.gif' }
-    }
-}
 
 //Projects
 function getProjects() {
@@ -47,20 +38,20 @@ function getProjects() {
             name: lang('projects/pokeclicker/name'),
             description: lang('projects/pokeclicker/description'),
             url: 'https://pokeclickercheat.netlify.app/',
-            // source: 'https://github.com/GiraffeSummer/pro-cons-list',
+            //source: 'https://github.com/GiraffeSummer/pro-cons-list',
         },
         {
             name: lang('projects/boardgame/name'),
             description: lang('projects/boardgame/description'),
             url: 'https://svelte-boardgame.netlify.app/',
-            // source: 'https://github.com/GiraffeSummer/pro-cons-list',
+            //source: 'https://github.com/GiraffeSummer/pro-cons-list',
         },
         {
             name: lang('projects/friendlight/name'),
             description: lang('projects/friendlight/description'),
             longText: lang('projects/friendlight/longtext'),
             url: 'https://friendlamp.netlify.app/',
-            // source: 'https://github.com/GiraffeSummer/pro-cons-list',
+            //source: 'https://github.com/GiraffeSummer/pro-cons-list',
         },
         {
             name: lang('projects/portfolio/name'),
@@ -118,4 +109,9 @@ function getSkills(dataOnly = false) {
         }
 }
 
-export { socials, getProjects, getAbout, getSkills } 
+//wrapper function
+function lang(field) {
+    return langRaw(field)[get(language)]
+}
+
+export { socials, getProjects, getSkills } 

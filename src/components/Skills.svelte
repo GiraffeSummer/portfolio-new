@@ -1,12 +1,12 @@
 <script>
   import SkillItem from './SkillItem.svelte';
   import { getSkills } from '../data.js';
-  import lang, { addListener } from '../lang';
-
+  import lang, { language } from '../lang';
   let data = getSkills();
-  addListener('langChanged', () => {
+  $: {
+    $language; //listen to language changes
     data = getSkills();
-  });
+  }
 </script>
 
 <section id="skills">

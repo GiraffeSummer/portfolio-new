@@ -1,39 +1,23 @@
 <script>
-  import lang, {
-    langlist,
-    getLanguage,
-    setLanguage,
-    langProperties,
-    addListener,
-    dispatch,
-  } from '../lang';
+  import lang, { language, langlist, langProperties } from '../lang';
 
-  addListener('langChanged', () => {
-    navitems = getNavItems();
-  });
+  $: navitems = [
+    { label: lang('nav/home')[$language], href: '#home' },
+    { label: lang('nav/about')[$language], href: '#about' },
+    { label: lang('nav/projects')[$language], href: '#projects' },
+    { label: lang('nav/contact')[$language], href: '#contact' },
+  ];
 
-  let navitems = getNavItems();
-
-  function getNavItems() {
-    return [
-      { label: lang('nav/home'), href: '#home' },
-      { label: lang('nav/about'), href: '#about' },
-      { label: lang('nav/projects'), href: '#projects' },
-      { label: lang('nav/contact'), href: '#contact' },
-    ];
-  }
-
-  let selectedLanguage = getLanguage();
+  let selectedLanguage = $language;
 
   function changeLang() {
-    setLanguage(selectedLanguage);
-    dispatch('langChanged', { lang: selectedLanguage });
+    language.set(selectedLanguage);
   }
 </script>
 
 <header>
   <!--Mobile-->
-  <div class="hidden-md hidden-lg ">
+  <div class="hidden-md hidden-lg row">
     <label for="drawer-control" class="drawer-toggle" />
     <input type="checkbox" id="drawer-control" class="drawer" />
     <!--Drawer-->
@@ -55,7 +39,7 @@
 
   <!--Desktop-->
   <div class="visually-hidden-sm row">
-    <li>
+    <li class="head-icon">
       <img src={'/favicon.ico'} alt="" />
     </li>
     {#each navitems as nav}
@@ -80,7 +64,6 @@
 </header>
 
 <style>
-  
   select {
     float: right;
     -moz-box-sizing: border-box;
@@ -95,13 +78,22 @@
     text-indent: -3px;
     padding: 0.3em 0 0.3em 0.7em;
   }
+
+  .head-icon {
+    padding: auto;
+    margin-top: 0.3rem;
+
+    width: 40px;
+    padding-left: 5px;
+  }
+  .head-icon img {
+    width: 40px;
+  }
   li {
     list-style: none;
   }
-  img {
-    margin: 0;
-    width: 40px;
-    padding-left: 5px;
+  .drawer-toggle {
+    padding: auto;
   }
   /* a {
     color: blue; /*var(--white);*/
