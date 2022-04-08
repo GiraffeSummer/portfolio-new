@@ -17,7 +17,7 @@
         height="1.2rem"
       />
     {:else if skill.iconClass}
-      <i class={skill.iconClass} />
+      <span class={skill.iconClass} />
     {/if}
     <b>
       {skill.name}

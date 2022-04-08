@@ -38,13 +38,14 @@
             class="button g-secondary col-md"
             target={project.target || '_blank'}
             href={project.url}
-            ><i class="fa-regular fa-share-from-square" /> {text.link}</a
+            ><span class="fa-solid fa-up-right-from-square" /> {text.link}</a
           >
           {#if project.source != undefined}
             <a
               class="button g-primary col-md"
               target="_blank"
-              href={project.source}><i class="fa-brands fa-github" /> Github</a
+              href={project.source}
+              ><span class="fa-brands fa-github" /> Github</a
             >
           {/if}
         </div>
