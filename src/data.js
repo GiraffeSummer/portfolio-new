@@ -82,32 +82,35 @@ function getSkills(dataOnly = false) {
                         { name: 'css', iconClass: 'fa-brands fa-css3', value: 4 },
                         { name: 'php', iconClass: 'fa-brands fa-php', value: 6 },
                         { name: 'laravel', iconClass: 'fa-brands fa-laravel', value: 4 }
-                    ].sort((a, d) => d.value - a.value)
+                    ].sort(desc)
                 },
 
                 {
                     name: lang('skills/databases'), iconClass: 'fa-solid fa-database', value: 8, children: [
                         { name: 'mysql', icon: 'https://www.mysql.com/common/logos/logo-mysql-170x115.png', value: 7 },
                         { name: 'mongodb', icon: 'https://raw.githubusercontent.com/mongodb-js/leaf/master/dist/mongodb-leaf_128x128.png', value: 8 },
-                    ].sort((a, d) => d.value - a.value)
+                    ].sort(desc)
                 },
 
                 {
                     name: lang('skills/softdev'), iconClass: 'fa-solid fa-code', children: [
                         { name: 'C#', iconClass: 'fa-brands fa-csharp', value: 8 },
                         { name: 'Electronjs', iconClass: 'fa-solid fa-atom', value: 7 },
-                    ].sort((a, d) => d.value - a.value)
+                    ].sort(desc)
                 },
 
                 {
                     name: lang('skills/general'), iconClass: 'fa-solid fa-box', children: [
                         { name: lang('skills/problemsolve'), iconClass: 'fa-solid fa-lightbulb', value: 8 },
                         { name: lang('skills/creative'), iconClass: 'fa-solid fa-paintbrush', value: 7 },
-                    ].sort((a, d) => d.value - a.value)
+                    ].sort(desc)
                 }
             ]
         }
 }
+
+function desc(a, d) { return d.value - a.value }
+function asc(a, d) { return a.value - d.value }
 
 //wrapper function
 function lang(field) {
