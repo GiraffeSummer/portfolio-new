@@ -72,7 +72,7 @@
       {/if}
     {/each}
 
-    <li>
+    <li class="langbtn">
       <select bind:value={selectedLanguage} on:change={changeLang}>
         {#each langlist as lang}
           <option value={lang}
