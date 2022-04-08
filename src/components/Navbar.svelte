@@ -13,6 +13,8 @@
   function changeLang() {
     language.set(selectedLanguage);
   }
+
+  let drawerOpen = false;
 </script>
 
 <header>
@@ -25,10 +27,17 @@
         id="drawer-control"
         name="drawer-control"
         class="drawer"
+        bind:checked={drawerOpen}
       />
       <!--Drawer-->
       <div class="container">
-        <label for="drawer-control" class="drawer-close" />
+        <label
+          for="drawer-control-close"
+          class="drawer-close"
+          on:click={() => {
+            drawerOpen = false;
+          }}
+        />
         {#each navitems as nav}
           {#if nav.enabled == undefined || nav.enabled == true}
             <a class="row" href={nav.href}>{nav.label}</a>
