@@ -46,7 +46,7 @@ export default function (field = null) {
         return translations[field];
     } else {
         let val = {}
-        Object.keys(langMap).forEach(lang => {
+        langlist.forEach(lang => {
             val[lang] = langMap[lang].translate(field)
         })
         translations[field] = val;
