@@ -30,6 +30,12 @@ export default function (field) {
         'projects/portfolio/name': "Dit portfolio",
         'projects/portfolio/description': "Portfolio van de projecten waar ik het meest trots op ben, of die het meest interessant zijn.",
 
+        'projects/shortener/name': "crri.pw",
+        'projects/shortener/description': "Url verkorter and bestand deel site",
+        'projects/shortener/longtext': `Ik had een instructie video gekeken (van CodeGarden)\nOm nieuwe technieken te leren,
+         en ik dit interessant vond, hiervan heb ik grootendeels de url delen vandaan.
+         Later heb ik zelf de bestanden delen functie gemaakt omdat wetransfer niet gemakkelijk was vond ik.`,
+
         //skills general
         'skills/title': 'Skills',
 

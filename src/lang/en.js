@@ -30,6 +30,11 @@ export default function (field) {
         'projects/portfolio/name': "This portfolio",
         'projects/portfolio/description': "A portfolio that I made with projects that I'm most proud of, or that are most interesting.",
 
+        'projects/shortener/name': "crri.pw",
+        'projects/shortener/description': "Url shortener and file sharing site",
+        'projects/shortener/longtext': `I followed a tutorial of an url shortener website (from CodeGarden) I found this interesting and wanted to learn new things.\n
+        I later added the filesharing system myself because I didn't like what Wetransfer was doing. I also made some other improvements so it's more user friendly.`,
+
         //skills general
         'skills/title': 'Skills',
 
