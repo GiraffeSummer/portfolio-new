@@ -8,6 +8,9 @@ export default function (field) {
         'projects/more': 'More',
         'projects/nosource': 'If there\'s no Github link',
 
+        'projects/koala/name': 'Hikage / Koala',
+        'projects/koala/description': 'Hikage  is a Discord bot that I\'ve worked on since 2017 (3 iterations).\nI\'ve kept it open source because I put a lot of effort into structuring it,\nand I want others to be able to learn from it.',
+
         'projects/drawapp/name': 'DrawApp',
         'projects/drawapp/description': 'An application where multiple users can draw pixelart at the same time',
 

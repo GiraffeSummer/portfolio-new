@@ -17,6 +17,11 @@ const socials = [
 function getProjects() {
     return [
         {
+            name: lang('projects/koala/name'), 
+            description: lang('projects/koala/description'),
+            source: "https://github.com/GiraffeSummer/Koala"
+        },
+        {
             name: lang('projects/drawapp/name'),
             description: lang('projects/drawapp/description'),
             url: 'https://draw.cripplerick.com/create',
@@ -77,11 +82,11 @@ function getSkills(dataOnly = false) {
                 {
                     name: lang('skills/webdev'), iconClass: 'fa-solid fa-code', value: 7, children: [
                         { name: 'nodejs', iconClass: 'fa-brands fa-node-js', value: 9 },
-                        { name: 'javascript', iconClass: 'fa-brands fa-js-square', value: 9 },
+                        { name: 'javascript / typescript', iconClass: 'fa-brands fa-js-square', value: 9 },
                         { name: 'html', iconClass: 'fa-brands fa-html5', value: 9 },
                         { name: 'css', iconClass: 'fa-brands fa-css3', value: 4 },
                         { name: 'php', iconClass: 'fa-brands fa-php', value: 6 },
-                        { name: 'laravel', iconClass: 'fa-brands fa-laravel', value: 4 }
+                        { name: 'laravel', iconClass: 'fa-brands fa-laravel', value: 6 }
                     ].sort(desc)
                 },
 

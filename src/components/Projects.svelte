@@ -34,12 +34,14 @@
           {/if}
         </div>
         <div class="row">
-          <a
-            class="button g-secondary col-md"
-            target={project.target || '_blank'}
-            href={project.url}
-            ><span class="fa-solid fa-up-right-from-square" /> {text.link}</a
-          >
+          {#if project.url != undefined}
+            <a
+              class="button g-secondary col-md"
+              target={project.target || '_blank'}
+              href={project.url}
+              ><span class="fa-solid fa-up-right-from-square" /> {text.link}</a
+            >
+          {/if}
           {#if project.source != undefined}
             <a
               class="button g-primary col-md"
