@@ -40,6 +40,13 @@ function getProjects() {
             source: 'https://github.com/GiraffeSummer/pro-cons-list',
         },
         {
+            name: lang('projects/shortener/name'),
+            description: lang('projects/shortener/description'),
+            longText: lang('projects/shortener/longtext'),
+            url: 'https://crri.pw/',
+            //source: 'https://github.com/GiraffeSummer/pro-cons-list',
+        },
+        {
             name: lang('projects/pokeclicker/name'),
             description: lang('projects/pokeclicker/description'),
             url: 'https://pokeclickercheat.netlify.app/',
