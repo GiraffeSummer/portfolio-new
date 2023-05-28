@@ -13,115 +13,114 @@
   function changeLang() {
     language.set(selectedLanguage);
   }
-
-  let drawerOpen = false;
 </script>
 
-<header>
-  <!--Mobile-->
-  <div class="hidden-md hidden-lg row">
-    <li>
-      <label for="drawer-control" class="drawer-toggle" />
-      <input
-        type="checkbox"
-        id="drawer-control"
-        name="drawer-control"
-        class="drawer"
-        bind:checked={drawerOpen}
-      />
-      <!--Drawer-->
-      <div class="container">
-        <label
-          for="drawer-control-close"
-          class="drawer-close"
-          on:click={() => {
-            drawerOpen = false;
-          }}
-        />
+<div class="navbar bg-base-100">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost lg:hidden" for="">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h8m-8 6h16"
+          /></svg
+        >
+      </label>
+      <ul
+        tabindex="0"
+        class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+      >
         {#each navitems as nav}
           {#if nav.enabled == undefined || nav.enabled == true}
-            <a class="row" href={nav.href}>{nav.label}</a>
+            <li><a href={nav.href}>{nav.label}</a></li>
           {/if}
         {/each}
-      </div>
-    </li>
-
-    <li class="langbtn">
-      <select
-        bind:value={selectedLanguage}
-        on:change={changeLang}
-        class="mobile"
-      >
-        {#each langlist as lang}
-          <option value={lang}>{langProperties(lang).icon.trim()}</option>
-        {/each}
-      </select>
-    </li>
-  </div>
-
-  <!--Desktop-->
-  <div class="visually-hidden-sm row">
-    <li class="head-icon">
-      <img src={'/favicon.ico'} alt="" />
-    </li>
-    {#each navitems as nav}
-      {#if nav.enabled == undefined || nav.enabled == true}
-        <li>
-          <a class="button" href={nav.href}>{nav.label}</a>
+        <li tabindex="0" class="z-10">
+          <a class="justify-between">
+            <!-- mobile -->
+            {langProperties(selectedLanguage).name || selectedLanguage}
+            {langProperties(selectedLanguage).icon}
+            <svg
+              class="fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              ><path
+                d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
+              /></svg
+            >
+          </a>
+          <ul class="p-2">
+            {#each langlist as lang}
+              <li>
+                <a
+                  on:click={() => {
+                    selectedLanguage = lang;
+                    changeLang();
+                  }}
+                  >{langProperties(lang).icon}
+                  {langProperties(lang).name || lang}</a
+                >
+              </li>
+            {/each}
+          </ul>
         </li>
-      {/if}
-    {/each}
-
-    <li class="langbtn">
-      <select bind:value={selectedLanguage} on:change={changeLang}>
-        {#each langlist as lang}
-          <option value={lang}
-            >{langProperties(lang).icon}
-            {langProperties(lang).name || lang}</option
-          >
-        {/each}
-      </select>
-    </li>
+      </ul>
+    </div>
+    <a class="btn btn-ghost normal-case text-xl" href="">
+      <div class="w-10">
+        <img src={'/favicon.ico'} alt="icon" />
+      </div>
+      <div class="pl-2">Gido Selten</div>
+    </a>
   </div>
-</header>
-
-<style>
-  select {
-    float: right;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-  }
-  select.mobile {
-    font-size: 1.3rem;
-    text-indent: -3px;
-    padding: 0.3em 0 0.3em 0.7em;
-  }
-
-  .langbtn {
-    margin: 0 0.8rem 0 auto;
-  }
-
-  .head-icon {
-    padding: auto;
-    margin-top: 0.3rem;
-
-    width: 40px;
-    padding-left: 5px;
-  }
-  .head-icon img {
-    width: 40px;
-  }
-  li {
-    list-style: none;
-  }
-  .drawer-toggle {
-    padding: auto;
-  }
-  /* a {
-    color: blue; /*var(--white);*/
-  /*}*/
-</style>
+  <div class="navbar-end hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      {#each navitems as nav}
+        {#if nav.enabled == undefined || nav.enabled == true}
+          <li><a href={nav.href}>{nav.label}</a></li>
+        {/if}
+      {/each}
+      <li tabindex="0" class="z-10">
+        <a>
+          <!-- desktop -->
+          {langProperties(selectedLanguage).icon}
+          {langProperties(selectedLanguage).name || selectedLanguage}
+          <svg
+            class="fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            ><path
+              d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+            /></svg
+          >
+        </a>
+        <ul class="p-2">
+          {#each langlist as lang}
+            <li>
+              <button
+                value={lang}
+                on:click={() => {
+                  selectedLanguage = lang;
+                  changeLang();
+                }}
+                >{langProperties(lang).icon}
+                {langProperties(lang).name || lang}</button
+              >
+            </li>
+          {/each}
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

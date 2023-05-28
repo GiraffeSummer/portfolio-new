@@ -2,6 +2,8 @@
   import lang, { language } from '../lang';
 </script>
 
-<footer>
-  <p>© 2022 - {lang('footer')[$language]} Gido Selten</p>
+<footer class="footer footer-center p-4 bg-base-300 text-base-content">
+  <div>
+    <p>© 2023 - {lang('footer')[$language]} Gido Selten</p>
+  </div>
 </footer>

@@ -17,9 +17,15 @@ const socials = [
 function getProjects() {
     return [
         {
-            name: lang('projects/koala/name'), 
+            name: lang('projects/koala/name'),
             description: lang('projects/koala/description'),
             source: "https://github.com/GiraffeSummer/Koala"
+        },
+        {
+            name: lang('projects/pokednd/name'),
+            description: lang('projects/pokednd/description'),
+            url: 'https://pokednd.cripplerick.com',
+            // source: 'https://github.com/GiraffeSummer/PokemonDnd',
         },
         {
             name: lang('projects/drawapp/name'),

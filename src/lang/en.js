@@ -11,6 +11,9 @@ export default function (field) {
         'projects/koala/name': 'Hikage / Koala',
         'projects/koala/description': 'Hikage  is a Discord bot that I\'ve worked on since 2017 (3 iterations).\nI\'ve kept it open source because I put a lot of effort into structuring it,\nand I want others to be able to learn from it.',
 
+        'projects/pokednd/name': 'Pokednd',
+        'projects/pokednd/description': 'wip',
+
         'projects/drawapp/name': 'DrawApp',
         'projects/drawapp/description': 'An application where multiple users can draw pixelart at the same time',
 
