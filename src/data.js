@@ -19,61 +19,79 @@ function getProjects() {
         {
             name: lang('projects/koala/name'),
             description: lang('projects/koala/description'),
-            source: "https://github.com/GiraffeSummer/Koala"
+            source: "https://github.com/GiraffeSummer/Koala",
+            tags: ['bot', 'js']
         },
         {
             name: lang('projects/pokednd/name'),
             description: lang('projects/pokednd/description'),
             url: 'https://pokednd.cripplerick.com',
+            tags: ['website']
             // source: 'https://github.com/GiraffeSummer/PokemonDnd',
-        },
-        {
-            name: lang('projects/drawapp/name'),
-            description: lang('projects/drawapp/description'),
-            url: 'https://draw.cripplerick.com/create',
-            source: 'https://github.com/GiraffeSummer/newest-image-api',
         },
         {
             name: lang('projects/gifmonkey/name'),
             description: lang('projects/gifmonkey/description'),
             url: 'https://gifmonkey.cripplerick.com',
             source: 'https://github.com/GiraffeSummer/newest-image-api',
+            tags: ['website', 'logins', 'database', 'images']
         },
         {
             name: lang('projects/procons/name'),
             description: lang('projects/procons/description'),
             url: 'https://procons.netlify.app/',
             source: 'https://github.com/GiraffeSummer/pro-cons-list',
+            tags: ['website']
+        },
+        {
+            name: lang('projects/fabeltjeskrant/name'),
+            description: lang('projects/fabeltjeskrant/description'),
+            longText: lang('projects/fabeltjeskrant/longtext'),
+            tags: ['UX', 'website']
+            // url: 'https://pokednd.cripplerick.com',
+            // source: 'https://github.com/GiraffeSummer/PokemonDnd',
         },
         {
             name: lang('projects/shortener/name'),
             description: lang('projects/shortener/description'),
             longText: lang('projects/shortener/longtext'),
             url: 'https://crri.pw/',
+            tags: ['website']
             //source: 'https://github.com/GiraffeSummer/pro-cons-list',
         },
         {
             name: lang('projects/pokeclicker/name'),
             description: lang('projects/pokeclicker/description'),
             url: 'https://pokeclickercheat.netlify.app/',
+            tags: ['website', 'reverse engineering']
             //source: 'https://github.com/GiraffeSummer/pro-cons-list',
         },
         {
             name: lang('projects/boardgame/name'),
             description: lang('projects/boardgame/description'),
             url: 'https://svelte-boardgame.netlify.app/',
+            tags: ['game design', 'website', 'dynamic']
             //source: 'https://github.com/GiraffeSummer/pro-cons-list',
+        },
+        {
+            name: lang('projects/drawapp/name'),
+            description: lang('projects/drawapp/description'),
+            url: 'https://draw.cripplerick.com/create',
+            source: 'https://github.com/GiraffeSummer/newest-image-api',
+            tags: ['websockets', 'website']
         },
         {
             name: lang('projects/friendlight/name'),
             description: lang('projects/friendlight/description'),
             longText: lang('projects/friendlight/longtext'),
             url: 'https://friendlamp.netlify.app/',
+            tags: ['websockets', 'website', 'arduino', 'database']
             //source: 'https://github.com/GiraffeSummer/pro-cons-list',
         },
         {
             name: lang('projects/portfolio/name'),
             description: lang('projects/portfolio/description'),
+            tags: ['UX', 'website'],
             url: '/',
             target: '_self',
             source: 'https://github.com/GiraffeSummer/portfolio-new',

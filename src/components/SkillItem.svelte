@@ -9,13 +9,7 @@
 <div class="section">
   <div>
     {#if skill.icon}
-      <img
-        class="greyscale"
-        src={skill.icon}
-        alt={skill.name}
-        width="1.2rem"
-        height="1.2rem"
-      />
+      <img class="grayscale avatar w-6" src={skill.icon} alt={skill.name} />
     {:else if skill.iconClass}
       <span class={skill.iconClass} />
     {/if}

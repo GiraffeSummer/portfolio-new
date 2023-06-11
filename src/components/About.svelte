@@ -28,10 +28,10 @@
         <h1 class="text-5xl font-bold">{text.name}</h1>
         <p class="py-6">{text.description}</p>
 
-        <div class="btn-group center">
+        <div class="join center">
           {#each socials as social}
             <a
-              class="btn btn-circle"
+              class="btn btn-circle join-item"
               rel="noopener noreferrer"
               aria-label={social.name}
               target="_blank"

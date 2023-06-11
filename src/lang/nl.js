@@ -12,7 +12,11 @@ export default function (field) {
         'projects/koala/description': 'Hikage is een Discord bot waar ik sinds 2017 aan heb gewerkt (3 iteraties). Ik heb hem open source gehouden omdat ik veel moeite heb gestopt om het goed te structureren,\nen wou dat andere er van konden leren.',
 
         'projects/pokednd/name': 'Pokednd',
-        'projects/pokednd/description': 'wip',
+        'projects/pokednd/description': 'PokemonDND is een website die ik heb gemaakt als hulpmiddelen voor een Dungeons & Dragons Pokémon game die we speelden.',
+
+        'projects/fabeltjeskrant/name': 'Fabeltjes Krant',
+        'projects/fabeltjeskrant/description': 'Fabeltjes Krant is een lichtkrant die ik heb gemaakt voor DICHTERBIJ (de verbeelding Uden)\nSamen met een bewerkings tool om de informatie in de lichtkrant aan te passen.\n',
+        'projects/fabeltjeskrant/longtext': 'Dit was een van mijn eerste dynamische websites die ik heb gemaakt.\nDe lichtkrant liet zien wie er aanwezig was van het personeel, wat leuke nieuws berichten, en wat foto\'s als een diavoorstelling.\nIk heb deze opdracht gemaakt met de instelling dat ook de clienten bij dichterbij de informatie kunnen aanpassen.',
 
         'projects/drawapp/name': 'Drawapp',
         'projects/drawapp/description': 'Een app die meerdere users tegelijkertijd aan een pixelart laat werken.',
@@ -73,6 +77,6 @@ export default function (field) {
         'nav/contact': 'Contact',
 
         //footer
-        footer: 'Gemaakt door'
+        'footer': 'Gemaakt door'
     }[field];
 }

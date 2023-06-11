@@ -29,6 +29,15 @@
           <h2 class="card-title">{project.name}</h2>
 
           <p>{project.description}</p>
+
+          {#if project.tags}
+            <div class="flex flex-auto flex-row gap-1">
+              {#each project.tags as tag}
+                <div class="badge badge-info">{tag}</div>
+              {/each}
+            </div>
+          {/if}
+
           {#if project.longText != undefined}
             <div
               class="collapse border border-base-300 bg-base-100 rounded-box"
@@ -50,7 +59,7 @@
                 target={project.target || '_blank'}
                 href={project.url}
               >
-                <span class="fa-solid fa-up-right-from-square" />
+                <span class="fa-solid fa-arrow-up-right-from-square" />
                 {text.link}
               </a>
             {/if}
@@ -70,7 +79,7 @@
 
     <div class="order-last col-span-full">
       <i class="">
-        {text.nosource}, <a class="btn-link " href="#contact">{text.contact}</a>
+        {text.nosource}, <a class="btn-link" href="#contact">{text.contact}</a>
       </i>
     </div>
   </div>
