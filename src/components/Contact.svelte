@@ -50,7 +50,7 @@
                 </label>
 
                 <textarea
-                  class="input input-bordered w-full max-w-xs"
+                  class="textarea textarea-bordered textarea-md w-full max-w-xs"
                   name="message"
                   id="contact-message"
                   rows="3"
