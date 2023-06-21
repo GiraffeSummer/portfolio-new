@@ -61,7 +61,7 @@ export default function (field) {
 
         //about page
         'about/name': 'Hoi, ik ben Gido,',
-        'about/description': 'Ik vind het leuk om creative en leuke webapps te maken.',
+        'about/description': 'Ik ben betrouwbaar, open, optimistisch en creatief en ik maak creative en leuke webapps.',
 
         //contact page
         'contact/title': "Stuur bericht",

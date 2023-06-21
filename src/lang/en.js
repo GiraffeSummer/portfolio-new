@@ -59,7 +59,7 @@ export default function (field) {
 
         //about page
         'about/name': 'Hi, I\'m Gido,',
-        'about/description': 'I like to make fun creative (web) apps. or small useful gimmicks.',
+        'about/description': 'I am trustworthy, open, optimistic and creative, and I make fun and imaginative (web) apps, or small useful gimmicks.',
 
         //contact page
         'contact/title': "Contact",
