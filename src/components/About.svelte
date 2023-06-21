@@ -13,65 +13,35 @@
   };
 </script>
 
-<section id="about" class="row ">
-  <div class="hidden-md hidden-lg row">
-    <img alt="me" class="me-small" src={text.img} width="100%" height="20rem" />
-  </div>
-  <div class="visually-hidden-sm row">
-    <img alt="me" class="me" src={text.img} width="12rem" height="12rem" />
-  </div>
-  <div class="col-sm ">
-    <div class="bio">
-      <h1>{text.name}</h1>
-      <h5>{text.description}</h5>
-    </div>
-    <div class="icons row">
-      {#each socials as social}
-        <a
-          rel="noopener noreferrer"
-          aria-label={social.name}
-          target="_blank"
-          href={social.url}
-        >
-          <span class="icon {social.icon}" />
-        </a>
-      {/each}
+<section id="about" class="row">
+  <div class="hero bg-base-200 w-full">
+    <div class="hero-content flex-col lg:flex-row">
+      <div>
+        <img
+          src={text.img}
+          alt="me"
+          class="max-w-sm rounded-lg shadow-2xl place-self-start"
+        />
+      </div>
+      <div />
+      <div>
+        <h1 class="text-5xl font-bold">{text.name}</h1>
+        <p class="py-6">{text.description}</p>
+
+        <div class="join center">
+          {#each socials as social}
+            <a
+              class="btn btn-circle join-item"
+              rel="noopener noreferrer"
+              aria-label={social.name}
+              target="_blank"
+              href={social.url}
+            >
+              <span class="text-lg icon {social.icon}" />
+            </a>
+          {/each}
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
-<style>
-  :root {
-    --about-image-size: 12rem;
-  }
-  section {
-    margin-top: 1.5rem;
-    color: var(--back-color);
-    padding: 4rem 2rem;
-    background: rgb(63, 94, 251);
-    background: linear-gradient(
-      150deg,
-      rgba(63, 94, 251, 1) 45%,
-      rgba(252, 70, 107, 1) 100%
-    );
-  }
-
-  img {
-    border: 1.8px solid black;
-    box-shadow: 2px 2px 6px #003864;
-    border-radius: 13px;
-    object-fit: cover;
-  }
-  .me {
-    width: var(--about-image-size);
-    height: var(--about-image-size);
-    margin-right: 3rem;
-  }
-
-  span.icon {
-    font-size: 2rem;
-    margin: 0.1rem 0.4rem;
-    margin-left: 0.4rem;
-    color: var(--back-color);
-  }
-</style>

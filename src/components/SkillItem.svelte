@@ -9,13 +9,7 @@
 <div class="section">
   <div>
     {#if skill.icon}
-      <img
-        class="icon"
-        src={skill.icon}
-        alt={skill.name}
-        width="1.2rem"
-        height="1.2rem"
-      />
+      <img class="grayscale avatar w-6" src={skill.icon} alt={skill.name} />
     {:else if skill.iconClass}
       <span class={skill.iconClass} />
     {/if}
@@ -24,28 +18,11 @@
     </b>
   </div>
   {#if !isNaN(skill.value)}
-    <div class="slider">
-      <div class="slider-inner" style="width:{percent}%;" />
-    </div>
+    <progress
+      class="progress progress-info w-56 bg-secondary"
+      value={percent}
+      max="100"
+    />
     <div>{skill.value}/{data.skillMaxNumber}</div>
   {/if}
 </div>
-
-<style>
-  img.icon {
-    width: 1.2rem;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-  }
-  .slider-inner {
-    background-color: #3f5efb;
-    height: 1rem;
-    border-radius: 4px;
-  }
-  .slider {
-    border-radius: 4px;
-    margin: 0;
-    padding: 0;
-    background-color: #fc466b;
-  }
-</style>

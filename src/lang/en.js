@@ -11,6 +11,13 @@ export default function (field) {
         'projects/koala/name': 'Hikage / Koala',
         'projects/koala/description': 'Hikage  is a Discord bot that I\'ve worked on since 2017 (3 iterations).\nI\'ve kept it open source because I put a lot of effort into structuring it,\nand I want others to be able to learn from it.',
 
+        'projects/pokednd/name': 'Pokednd',
+        'projects/pokednd/description': 'PokeDND was made as a set of tools to help out with a Pokémon themed Dungeons & Dragons game.',
+
+        'projects/fabeltjeskrant/name': 'Fabeltjes Krant',
+        'projects/fabeltjeskrant/description': 'This was a website that I made for DICHTERBIJ ',
+        'projects/fabeltjeskrant/longtext': 'One of the first dynamic websites I made. I also focussed on that even the clients could edit the information shown in the website.',
+
         'projects/drawapp/name': 'DrawApp',
         'projects/drawapp/description': 'An application where multiple users can draw pixelart at the same time',
 
@@ -52,7 +59,7 @@ export default function (field) {
 
         //about page
         'about/name': 'Hi, I\'m Gido,',
-        'about/description': 'I like to make fun creative (web) apps. or small useful gimmicks.',
+        'about/description': 'I am trustworthy, open, optimistic and creative, and I make fun and imaginative (web) apps, or small useful gimmicks.',
 
         //contact page
         'contact/title': "Contact",
@@ -68,6 +75,6 @@ export default function (field) {
         'nav/contact': 'Contact',
 
         //footer
-        footer: 'Made by',
+        'footer': 'Made by',
     }[field];
 }

@@ -1,19 +1,3 @@
-.button.g-primary {
-    color: #f8f8f8;
-    background-color: #fc456a;
-}
-
-.button.g-secondary {
-    background-color: #3f5efb;
-    color: #f8f8f8;
-}
-
-.button.g-primary:hover {
-    color: #f8f8f8;
-    background-color: hsl(348, 97%, 40%);
-}
-
-.button.g-secondary:hover {
-    color: #f8f8f8;
-    background-color: hsl(230, 78%, 40%);
-}
+@tailwind utilities;
+@tailwind components;
+@tailwind base;

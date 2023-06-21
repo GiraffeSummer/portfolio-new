@@ -1,8 +1,9 @@
 <script>
-  import '../node_modules/@fortawesome/fontawesome-free/css/solid.min.css';
-  import '../node_modules/@fortawesome/fontawesome-free/css/brands.min.css';
-  import 'mini.css';
-  import './global.css';
+  // import '../node_modules/@fortawesome/fontawesome-free/css/solid.min.css';
+  // import '../node_modules/@fortawesome/fontawesome-free/css/brands.min.css';
+  import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+  // import 'mini.css';
+  // import './global.css';
   import lang, { setLanguage } from './lang.js';
 
   let darkMode =
@@ -25,9 +26,11 @@
 <main class:dark={darkMode}>
   <Navbar />
   <div id="#home" />
-  <About />
-  <Skills />
-  <Projects />
+  <div class="grid gap-y-8">
+    <About />
+    <Skills />
+    <Projects />
+  </div>
   <Contact />
   <Footer />
 </main>
