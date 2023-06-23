@@ -23,11 +23,12 @@ function getProjects() {
             tags: ['bot', 'js']
         },
         {
-            name: lang('projects/pokednd/name'),
-            description: lang('projects/pokednd/description'),
-            url: 'https://pokednd.cripplerick.com',
-            tags: ['website']
-            // source: 'https://github.com/GiraffeSummer/PokemonDnd',
+            name: lang('projects/friendlight/name'),
+            description: lang('projects/friendlight/description'),
+            longText: lang('projects/friendlight/longtext'),
+            url: 'https://friendlamp.netlify.app/',
+            tags: ['websockets', 'website','app', 'arduino', 'database']
+            //source: 'https://github.com/GiraffeSummer/pro-cons-list',
         },
         {
             name: lang('projects/gifmonkey/name'),
@@ -37,19 +38,26 @@ function getProjects() {
             tags: ['website', 'logins', 'database', 'images']
         },
         {
-            name: lang('projects/procons/name'),
-            description: lang('projects/procons/description'),
-            url: 'https://procons.netlify.app/',
-            source: 'https://github.com/GiraffeSummer/pro-cons-list',
-            tags: ['website']
-        },
-        {
             name: lang('projects/fabeltjeskrant/name'),
             description: lang('projects/fabeltjeskrant/description'),
             longText: lang('projects/fabeltjeskrant/longtext'),
             tags: ['UX', 'website']
             // url: 'https://pokednd.cripplerick.com',
             // source: 'https://github.com/GiraffeSummer/PokemonDnd',
+        },
+        {
+            name: lang('projects/pokednd/name'),
+            description: lang('projects/pokednd/description'),
+            url: 'https://pokednd.cripplerick.com',
+            tags: ['website']
+            // source: 'https://github.com/GiraffeSummer/PokemonDnd',
+        },
+        {
+            name: lang('projects/drawapp/name'),
+            description: lang('projects/drawapp/description'),
+            url: 'https://draw.cripplerick.com/create',
+            source: 'https://github.com/GiraffeSummer/newest-image-api',
+            tags: ['websockets', 'website']
         },
         {
             name: lang('projects/shortener/name'),
@@ -74,19 +82,11 @@ function getProjects() {
             //source: 'https://github.com/GiraffeSummer/pro-cons-list',
         },
         {
-            name: lang('projects/drawapp/name'),
-            description: lang('projects/drawapp/description'),
-            url: 'https://draw.cripplerick.com/create',
-            source: 'https://github.com/GiraffeSummer/newest-image-api',
-            tags: ['websockets', 'website']
-        },
-        {
-            name: lang('projects/friendlight/name'),
-            description: lang('projects/friendlight/description'),
-            longText: lang('projects/friendlight/longtext'),
-            url: 'https://friendlamp.netlify.app/',
-            tags: ['websockets', 'website', 'arduino', 'database']
-            //source: 'https://github.com/GiraffeSummer/pro-cons-list',
+            name: lang('projects/procons/name'),
+            description: lang('projects/procons/description'),
+            url: 'https://procons.netlify.app/',
+            source: 'https://github.com/GiraffeSummer/pro-cons-list',
+            tags: ['website']
         },
         {
             name: lang('projects/portfolio/name'),

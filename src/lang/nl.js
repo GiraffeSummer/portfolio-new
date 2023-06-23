@@ -35,7 +35,8 @@ export default function (field) {
 
         'projects/friendlight/name': 'Vrienden lamp',
         'projects/friendlight/description': "Een (fysieke) vrienden lamp die synchroniseerd met de lamp van een vriend.",
-        'projects/friendlight/longtext': 'Ik zag zo\'n zelfde idee online, en ik dacht dat ik het beter en goedkoper kon. dit was ook erg interessant met veel verschillende technieken.\n(De website is setup instructies, stuur een bericht voor meer info, of een demo)',
+        'projects/friendlight/longtext': `Ik zag zo\'n zelfde idee online, en ik dacht dat ik het beter en goedkoper kon. dit was ook erg interessant met veel verschillende technieken.\n(De website is setup instructies, stuur een bericht voor meer info, of een demo)\n
+        Hier kwam erg veel bij kijken, websocket server met database, arduino lamp (met websocket client), solderen en ontwikkelen van de hardware en een telefoon app om de lamp te bedienen.`,
 
         'projects/portfolio/name': "Dit portfolio",
         'projects/portfolio/description': "Portfolio van de projecten waar ik het meest trots op ben, of die het meest interessant zijn.",

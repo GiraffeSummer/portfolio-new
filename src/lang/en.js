@@ -35,7 +35,8 @@ export default function (field) {
 
         'projects/friendlight/name': 'Friendlight',
         'projects/friendlight/description': "A (physical) light that syncs with your friend's light.",
-        'projects/friendlight/longtext': 'I saw a similar idea online, and I thought I could do it better and cheaper.\n(Website is setup instructions, contact me for more info/demo)',
+        'projects/friendlight/longtext': `I saw a similar idea online, and I thought I could do it better and cheaper.\n(Website is setup instructions, contact me for more info/demo)\n
+        This was a lot of systems working together, a websocket server with database, arduino light (with websocket client), soldering and constructing the hardware and a mobile app to control the light.`,
 
         'projects/portfolio/name': "This portfolio",
         'projects/portfolio/description': "A portfolio that I made with projects that I'm most proud of, or that are most interesting.",
